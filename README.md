@@ -111,3 +111,119 @@ jupyter notebook projeto-7-chicago-taxi.ipynb
 ## Observação
 
 Este é um estudo educacional baseado em uma amostra de viagens e em resultados de consultas SQL. As conclusões refletem o período e as variáveis disponíveis nos arquivos do projeto; portanto, não devem ser interpretadas como uma descrição definitiva de toda a operação de táxis de Chicago.
+
+---
+
+## English version
+
+Project developed during **Sprint 7 of the TripleTen Data Science Bootcamp**, using Python, pandas, Matplotlib, Seaborn and SciPy.
+
+## About the project
+
+This project analyzes taxi trips in Chicago with a focus on exploratory data analysis and testing an operational hypothesis. The study uses results from SQL queries and investigates which companies concentrate the most rides, which neighborhoods appear most frequently as destinations, and whether weather conditions influence trip duration between the Loop and O'Hare International Airport.
+
+The objective is to transform the data into useful information to understand transportation demand and to assess whether trips made on rainy Saturdays behave differently from trips made on Saturdays under other conditions.
+
+## Objectives
+
+The project was developed to:
+
+- import and inspect the results of the SQL queries;
+- check dimensions, data types, missing values and descriptive statistics;
+- identify the top ten taxi companies by number of rides;
+- identify the top ten Chicago neighborhoods by average number of completed trips;
+- build charts of companies and neighborhoods to facilitate result interpretation;
+- separate Loop-to-O'Hare trips according to weather conditions;
+- test the hypothesis about the average duration of trips on rainy Saturdays;
+- explain the null and alternative hypotheses, the significance level and the decision criterion.
+
+## Data used
+
+The notebook uses three result files provided by the project:
+
+| Arquivo | Conteúdo |
+|---|---|
+| `project_sql_result_01.csv` | Número de corridas por empresa de táxi nos dias 15 e 16 de novembro de 2017 |
+| `project_sql_result_04.csv` | Bairros de Chicago e número médio de viagens que terminaram em cada bairro em novembro de 2017 |
+| `project_sql_result_07.csv` | Data e hora de início, condições meteorológicas e duração das viagens do Loop para O'Hare |
+
+**The datasets are not included in this repository.** They must be made available separately in the `/datasets/` directory, according to the original course instructions.
+
+## Steps performed
+
+### 1. Exploratory analysis
+
+The first two files are loaded and evaluated for format, data types, missing values and descriptive statistics. The notebook then sorts companies by number of rides and neighborhoods by average number of destinations.
+
+### 2. Visualizations
+
+Bar charts are created to show the taxi companies with the highest ride volume and the ten neighborhoods with the highest average number of completed trips. The visualizations allow identification of demand concentration and regions with higher drop-off flow.
+
+### 3. Hypothesis test
+
+The third file is used to compare the duration of Loop-to-O'Hare trips on rainy Saturdays and on Saturdays with other weather conditions. The statistical test is performed with independent samples, the significance level is set in the notebook and the interpretation is based on the p-value.
+
+The formulation adopted is:
+
+- **Null hypothesis (H₀):** the mean duration of trips on rainy Saturdays is equal to the mean duration of trips on non-rainy Saturdays;
+- **Alternative hypothesis (H₁):** the mean duration of trips on rainy Saturdays is different from the mean duration of trips on non-rainy Saturdays.
+
+The decision criterion is to reject H₀ when the p-value is less than the chosen significance level. The justification for the test and the conclusion are recorded in the notebook.
+
+## Main findings
+
+The analysis shows a strong concentration of rides in a small group of companies, with emphasis on Flash Cab. Among destinations, the Loop leads by a wide margin, followed by River North, Streeterville and West Loop, which confirms the importance of downtown Chicago as an arrival area.
+
+The statistical test evaluates whether rain changes the duration of trips between the Loop and O'Hare. The notebook's conclusion is based on the observed p-value and should be interpreted specifically for the set of Saturdays analyzed, without automatic generalization to all days or routes.
+
+## Result
+
+The outcome is a diagnosis of taxi demand in Chicago with a ranking of companies, a ranking of the ten main destination neighborhoods and a test of the hypothesis about the duration of Loop-to-O'Hare trips on rainy Saturdays. The visualizations highlight the concentration of flow in the Loop and other central neighborhoods, while the statistical conclusion should be read according to the p-value and the significance level recorded in the notebook.
+
+## What I learned
+
+The project consolidated the connection between SQL query results and analysis in Python, including slicing, grouping, sorting, chart building and formulation of null and alternative hypotheses. It also reinforced correct interpretation of p-value, alpha and limitations of generalization.
+
+## Possible improvements
+
+As an evolution, it would be possible to document the original SQL queries, present confidence intervals and effect sizes, compare weekdays and peak hours as well, and use robust or non-parametric tests as a sensitivity analysis. Including quantitative precipitation and travel time would allow a more detailed operational investigation.
+
+## Technologies used
+
+- Python 3
+- pandas
+- NumPy
+- Matplotlib
+- Seaborn
+- SciPy
+- Jupyter Notebook
+- SQL and GitHub
+
+## How to run
+
+Clone the repository:
+
+```bash
+git clone https://github.com/Marcdur/tripleten-sprint-07-chicago-taxi.git
+cd tripleten-sprint-07-chicago-taxi
+```
+
+Install the required libraries:
+
+```bash
+pip install pandas numpy matplotlib seaborn scipy jupyter
+```
+
+Make the three CSV files available in the `/datasets/` directory and open the notebook:
+
+```bash
+jupyter notebook projeto-7-chicago-taxi.ipynb
+```
+
+## Main file
+
+- [`projeto-7-chicago-taxi.ipynb`](./projeto-7-chicago-taxi.ipynb): notebook with data loading, exploratory analysis, visualizations, statistical test and conclusions.
+
+## Note
+
+This is an educational study based on a sample of trips and on results from SQL queries. The conclusions reflect the period and variables available in the project files; therefore, they should not be interpreted as a definitive description of the entire Chicago taxi operation.
