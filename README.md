@@ -60,6 +60,18 @@ A análise mostra forte concentração de corridas em um grupo reduzido de empre
 
 O teste estatístico avalia se a chuva altera a duração das viagens entre o Loop e O'Hare. A conclusão do notebook é baseada no resultado observado no p-valor e deve ser interpretada especificamente para o conjunto de sábados analisado, sem generalização automática para todos os dias ou trajetos.
 
+## Resultado
+
+O resultado é um diagnóstico de demanda de táxis em Chicago com ranking de empresas, ranking dos dez principais bairros de destino e teste da hipótese sobre a duração de viagens do Loop para O’Hare em sábados chuvosos. As visualizações evidenciam a concentração do fluxo no Loop e em outros bairros centrais, enquanto a conclusão estatística deve ser lida de acordo com o p-valor e o nível de significância registrados no notebook.
+
+## O que aprendi
+
+O projeto consolidou a conexão entre resultados de consultas SQL e análise em Python, incluindo recortes, agrupamentos, ordenação, construção de gráficos e formulação de hipóteses nula e alternativa. Também reforçou a interpretação correta de p-valor, alfa e limitações de generalização.
+
+## Melhorias possíveis
+
+Como evolução, seria possível documentar as consultas SQL originais, apresentar intervalos de confiança e tamanho de efeito, comparar também dias úteis e horários de pico e usar testes robustos ou não paramétricos como análise de sensibilidade. A inclusão de precipitação quantitativa e tempo de deslocamento permitiria uma investigação operacional mais detalhada.
+
 ## Tecnologias utilizadas
 
 - Python 3
